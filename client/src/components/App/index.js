@@ -1,12 +1,24 @@
 import React from 'react';
-import './index.css';
+import Header from '../Header';
+import Body from '../Body';
+import Button from '../Button';
+import HowItWorks from '../HowItWorks';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        React App
+        <Header />
       </header>
+      
+      <div>
+        <Body />
+      </div>
+
+      <div>
+        <HowItWorks />
+      </div>
     </div>
   );
 }
