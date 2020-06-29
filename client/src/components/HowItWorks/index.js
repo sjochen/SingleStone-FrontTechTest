@@ -1,39 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-function howItWorks() {
+function HowItWorks() {
 
-    axios(
-        {
-            method: "GET",
-            url: "https://uqnzta2geb.execute-api.us-east-1.amazonaws.com/default/FrontEndCodeChallenge"
-        }
+    const [results, setResults] = useState();
 
-    ).then(res => {
-        console.log(res.data)
-        return (
-            <div>
-                <h1>How It Works</h1>
-                {res.data.sort((a, b) => a.stepNumber - b.stepNumber).map(steps => {
-                    return (
-                        <div>
-                            <h1>{steps.stepNumber}</h1>
-                            {steps.versionContent.map(name => {
-                                return (
-                                    <div>
-                                        <h3>{name.title}</h3>
-                                        <p>{name.body}</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    )
 
-                })}
-            </div>
-        )
-    })
+
+    useEffect(() => {
+        axios(
+            {
+                method: "GET",
+                url: "https://uqnzta2geb.execute-api.us-east-1.amazonaws.com/default/FrontEndCodeChallenge"
+            }
+
+        ).then(res => {
+            console.log(res.data)
+            let item = res.data;
+            setResults(item);
+        })
+    }, []);
+
+    return (
+        <div>
+            <h1>How It Works</h1>
+            {results && results.sort((a,b) => a - b).map(data => {
+                return (
+                    <div>
+                        <h1>{data.stepNumber}</h1>
+                        {data.versionContent.map(name => {
+                            return (
+                                <div>
+                                    <h3>{name.title}</h3>
+                                    <p>{name.body}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                )
+
+            })}
+        </div>
+    )
+
 };
 
-export default howItWorks;
+export default HowItWorks;
