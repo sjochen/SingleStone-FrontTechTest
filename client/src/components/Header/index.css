@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+.header{
+    background-color: rgb(37, 37, 37);
+    color: rgb(122, 240, 195);
+
+}

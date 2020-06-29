@@ -1,9 +1,11 @@
-import React from "react"
+import React from "react";
+import './index.css';
+
 
 function header() {
     return(
         <div className="header">
-            <h1>ENDLESS</h1>
+            
         </div>
     )
 };

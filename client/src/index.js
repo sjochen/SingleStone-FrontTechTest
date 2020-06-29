@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './fonts/Lato-Light.ttf'
 import './index.css';
 import App from './components/App';
 import Header from './components/Header';
