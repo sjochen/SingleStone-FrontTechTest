@@ -10,4 +10,4 @@ Below I have attached instructions on how to run this appication locally. I also
 This is a front-end website build with React. It makes an API call using Axios and uses the data to populate the page. I also used media queries to make the web page responsive!
 
 ## Deployed Link:
-https://sjochen.github.io/SingleStone-FrontTechTest/
+
