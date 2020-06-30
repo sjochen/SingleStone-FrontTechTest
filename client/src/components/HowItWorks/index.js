@@ -5,8 +5,18 @@ import axios from 'axios';
 function HowItWorks() {
 
     const [results, setResults] = useState();
+
+    const sortDates = (dates) => dates.forEach((date) => date.versionContent.sort((a, b) => new Date(a.effectiveDate) < new Date(b.effectiveDate) ? 1 : -1));
+
     const sorted = (steps) => {
         steps.sort((a, b) => (a.stepNumber - b.stepNumber));
+    }
+
+    const dataSorter = (data) => {
+        data.forEach(date => {
+            date.versionContent = date.versionContent[0];
+        })
+
     }
 
 
@@ -20,9 +30,11 @@ function HowItWorks() {
         ).then(res => {
             console.log(res.data)
             let item = res.data;
+            sortDates(item);
             sorted(item);
+            dataSorter(item);
             setResults(item);
-            
+
         })
     }, []);
 
@@ -33,14 +45,10 @@ function HowItWorks() {
                 return (
                     <div>
                         <h1>{data.stepNumber}</h1>
-                        {data.versionContent.map(name => {
-                            return (
-                                <div>
-                                    <h3>{name.title}</h3>
-                                    <p>{name.body}</p>
-                                </div>
-                            )
-                        })}
+                        <div>
+                            <h3>{data.versionContent.title}</h3>
+                            <p>{data.versionContent.body}</p>
+                        </div>
                     </div>
                 )
 
