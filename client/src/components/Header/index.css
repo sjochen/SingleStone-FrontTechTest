@@ -20,3 +20,11 @@
 .color-filter{
     filter: invert(90%) sepia(7%) saturate(2332%) hue-rotate(96deg) brightness(94%) contrast(100%);
 }
+
+
+@media only screen and (max-width: 565px){
+    #logo{
+        width: 30%;
+    }
+}
+

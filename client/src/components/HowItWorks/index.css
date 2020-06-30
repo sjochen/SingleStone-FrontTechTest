@@ -31,3 +31,40 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+
+@media only screen and (max-width: 965px){
+    .boxes{
+        max-width: 13%;
+        margin: 5px 35px 30px 35px;
+    }
+}
+
+@media only screen and (max-width: 797px){
+    .boxes{
+        max-width: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .boxes{
+        max-width: 25%;
+    }
+}
+
+@media only screen and (max-width: 565px){
+    .boxes{
+        display: inline;;
+    }
+
+    #numb{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .boxes{
+        display: inline;
+    }
+}

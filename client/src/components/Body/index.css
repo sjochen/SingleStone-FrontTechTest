@@ -7,3 +7,28 @@
 #par2{
     font-size: 30px;
 }
+
+
+
+@media only screen and (max-width: 565px){
+    
+    .main{
+        max-width: 60%;
+    }
+    
+    #par2{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    
+    .main{
+        padding-top: 20%;
+        max-width: 70%;
+    }
+    
+    #par2{
+        font-size: 20px;
+    }
+}
