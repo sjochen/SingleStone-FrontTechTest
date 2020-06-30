@@ -5,7 +5,9 @@ import axios from 'axios';
 function HowItWorks() {
 
     const [results, setResults] = useState();
-
+    const sorted = (steps) => {
+        steps.sort((a, b) => (a.stepNumber - b.stepNumber));
+    }
 
 
     useEffect(() => {
@@ -18,14 +20,16 @@ function HowItWorks() {
         ).then(res => {
             console.log(res.data)
             let item = res.data;
+            sorted(item);
             setResults(item);
+            
         })
     }, []);
 
     return (
         <div>
             <h1>How It Works</h1>
-            {results && results.sort((a,b) => a - b).map(data => {
+            {results && results.map(data => {
                 return (
                     <div>
                         <h1>{data.stepNumber}</h1>
