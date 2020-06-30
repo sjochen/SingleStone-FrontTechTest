@@ -6,6 +6,17 @@
 
 .header{
     background-color: rgb(37, 37, 37);
-    color: rgb(122, 240, 195);
+    height: 30px;
+}
 
+#logo{
+    height: 100%;
+    width: 20%;
+    padding-left: 11%;
+    padding-top: 4px;
+    
+}
+
+.color-filter{
+    filter: invert(90%) sepia(7%) saturate(2332%) hue-rotate(96deg) brightness(94%) contrast(100%);
 }

@@ -1,0 +1,13 @@
+#button{
+    border-radius: 50px;
+    border: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 6px 25px 6px 25px;
+    margin-top: 15px;
+    background-color: #7af0c3;
+}
+
+.butDiv{
+    padding-left: 11%;
+}

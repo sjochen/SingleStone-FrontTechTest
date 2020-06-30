@@ -7,7 +7,7 @@ function header() {
     return (
         <div className="header">
             <div id='logo'>
-                <img src={require('./images/logo-endless.svg')} alt='Logo' />
+                <img src={require('./images/logo-endless.svg')} className= "color-filter" alt='Logo' />
             </div>
         </div>
     )

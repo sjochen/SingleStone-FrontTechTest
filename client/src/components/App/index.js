@@ -3,6 +3,7 @@ import Header from '../Header';
 import Body from '../Body';
 import Button from '../Button';
 import HowItWorks from '../HowItWorks';
+import './index.css';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <Header />
       </header>
       
-      <div>
+      <div className= "midBody">
         <Body />
         <Button />
       </div>

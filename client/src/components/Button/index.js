@@ -1,8 +1,11 @@
 import React from "react";
+import './index.css'
 
 function button() {
-    return(
-        <button>GET STARTED</button>
+    return (
+        <div className="butDiv">
+            <button id="button">GET STARTED</button>
+        </div>
     )
 };
 
