@@ -7,12 +7,15 @@ function HowItWorks() {
 
     const [results, setResults] = useState([]);
 
+    // Used to organize the dates in order of most recent
     const sortDates = (dates) => dates.forEach((date) => date.versionContent.sort((a, b) => new Date(a.effectiveDate) < new Date(b.effectiveDate) ? 1 : -1));
 
+    // Ordering the steps in the proper order
     const stepSorted = (steps) => {
         steps.sort((a, b) => (a.stepNumber - b.stepNumber));
     }
 
+    // Only shows one of the steps based on the most recent date
     const versionContentSorter = (data) => {
         data.forEach(date => {
             date.versionContent = date.versionContent[0];
@@ -21,6 +24,8 @@ function HowItWorks() {
 
 
     useEffect(() => {
+
+        // Making call to the API
         axios(
             {
                 method: "GET",
@@ -41,6 +46,8 @@ function HowItWorks() {
     return (
         <div className="bod">
             <h1 id="title">How It Works</h1>
+            
+            {/* Mapping over the results */}
             {results.map((data,key) => {
                     return (
                         <div className="boxes" key={key}>
