@@ -54,7 +54,7 @@ function HowItWorks() {
                             <h1 id="numb">0{data.stepNumber}</h1>
                             <div>
                                 <h3 id="instruc">{data.versionContent.title}</h3>
-                                <p>{data.versionContent.body}</p>
+                                <p id="howPara">{data.versionContent.body}</p>
                             </div>
                         </div>
                     )

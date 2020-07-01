@@ -3,15 +3,33 @@
   src: url('../../fonts/Lato-Light.ttf');
 }
 
+
+html, body{
+  height: 100%;
+  
+}
+
+body{
+  min-height: 100vh;
+}
+
 .App{
   font-family: Lato;
+  height: 100vh;
 }
 
 .midBody{
   background-image: url('./images/photo-couch.jpg');
-  height: 450px;
-  background-size: 100% 520px;
+  background-repeat: no-repeat;
+  height: auto;
+  background-size: 100% 560px;
   color: aliceblue;
 }
 
+
+@media only screen and (max-width: 768px){
+  .midBody{
+    background-size: 110% 700px;
+  }
+}
 
